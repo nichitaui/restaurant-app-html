@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+body {
+  /* max-width: 480px; */
+  background-color: #FFFFFF;
+  font-family: Poppins;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 10;
+}
+.header-title-container {
+  position: relative;
+  display: inline-flex;
+}
+.header-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  color: #002D42;
+  font-size: 12px;
+}
+.header-search-container, .header-search {
+  position: relative;
+}
+.header-search-container .header-search svg {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.header-search-container .header-search input {
+  padding-left: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px #E5E5E5;
+  border-radius: 36px;
+}
+.header-search-container .header-search input::placeholder,
+.header-search-container .header-search input::-webkit-input-placeholder,
+.header-search-container .header-search input::-moz-placeholder,
+.header-search-container .header-search input:-ms-input-placeholder,
+.header-search-container .header-search input:-moz-placeholder {
+  font-size: 12px !important;
+}
+.header-filter-container {
+  overflow-x: auto;
+}
+.header-filter-container .header-filter-wrapper {
+  width: max-content;
+}
+.header-filter-container .header-filter-wrapper button {
+  background-color: #F8F8F8;
+  border-radius: 36px;
+  font-size: 12px;
+}
+.btn-filters {
+  color: #FF414D;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.content {
+  position: relative;
+  background-color: #FFFFFF;
+  height: 100%;
+  padding-top: 160px;
+  padding-bottom: 70px;
+  overflow: auto;
+}
+.content .content-title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.content .content-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+.content .content-wrapper .card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px #D8EBF1;
+}
+.content .content-wrapper .card .card-header {
+  position: relative;
+  max-height: 150px;
+  overflow: hidden;
+}
+.content .content-wrapper .card .card-header svg {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  right: 15px;
+}
+.content .content-wrapper .card .card-body {
+  font-size: 12px;
+  padding: 10px;
+  line-height: 18px;
+}
+@media(max-width: 350px) {
+  .content .content-wrapper .card .card-body {
+    font-size: 10px;
+  }
+}
+.content .content-wrapper .card .card-body .font-sm {
+  font-size: 10px;
+}
+
+
+.color-green {
+  color: #19A5B6;
+}
+.color-gray {
+  color: #C4C4C4;
+}
+.color-red {
+  color: #FF414D;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  bottom: 0px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px #E5E5E5;
+  border-radius: 10px 10px 0px 0px;
+}
+.footer-nav {
+  display: inline-flex;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+.footer-nav .nav-item {
+  list-style: none;
+  width: 20%;
+  height: 70px;
+}
+.footer-nav .nav-item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.footer-nav .nav-item.main-nav {
+  position: relative;
+  top: -70px;
+}
+.footer-nav .nav-item.main-nav a svg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.footer-nav .nav-item a svg {
+  margin-top: 20px;
+}

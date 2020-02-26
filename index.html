@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Restaurant App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="assets/jquery/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+  <script src="assets/plugins/popper/popper.min.js"></script>
+  <script src="assets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="px-4 pt-4 pb-2">
+  <div class="header-title-container">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+      <path d="M17.5 8.33337C17.5 14.1667 10 19.1667 10 19.1667C10 19.1667 2.5 14.1667 2.5 8.33337C2.5 6.34425 3.29018 4.4366 4.6967 3.03007C6.10322 1.62355 8.01088 0.833374 10 0.833374C11.9891 0.833374 13.8968 1.62355 15.3033 3.03007C16.7098 4.4366 17.5 6.34425 17.5 8.33337Z" fill="#19A5B6" stroke="#19A5B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 10.8334C11.3807 10.8334 12.5 9.71409 12.5 8.33337C12.5 6.95266 11.3807 5.83337 10 5.83337C8.61929 5.83337 7.5 6.95266 7.5 8.33337C7.5 9.71409 8.61929 10.8334 10 10.8334Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+      <clipPath id="clip0">
+      <rect width="20" height="20" fill="white"/>
+      </clipPath>
+      </defs>
+    </svg>
+    <div class="header-title ml-2">Calea Dumbarvli 40, Sibiu, Romania</div>
+  </div>
+  <div class="header-search-container py-3">
+    <div class="header-search">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#FF414D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.5 17.5L13.875 13.875" stroke="#FF414D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <input type="text" class="form-control" placeholder="Search for resturants, location, cuisine..." />
+    </div>
+  </div>
+  <div class="header-filter-container">
+    <div class="header-filter-wrapper">
+      <button class="btn btn-default btn-sm btn-filters">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+          <path d="M2.5 13.125V8.75" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.5 6.25V1.875" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.5 13.125V7.5" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.5 5V1.875" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 13.125V10" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 7.5V1.875" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M0.625 8.75H4.375" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.625 5H9.375" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.625 10H14.375" stroke="#FF414D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0">
+          <rect width="15" height="15" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+        Filters
+      </button>
+      <button class="btn btn-default btn-sm">Open now</button>
+      <button class="btn btn-default btn-sm">Price Range</button>
+      <button class="btn btn-default btn-sm">Rating</button>
+    </div>
+  </div>
+</header>
+  
+<div class="container content px-2">
+  <h4 class="content-title px-3">Nearest</h4>
+  <div class="content-wrapper">
+    
+    <div class="card">
+      <div class="card-header p-0">
+        <img src="assets/img/pizza.jpeg" class="w-100" alt="pizza" />
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172V3.84172Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-black font-bold">Nobu</div>
+          </div>
+          <div class="d-inline-block text-right ml-auto">
+            <div class="color-green d-inline-block">Open Now</div>
+            <div class="color-gray font-sm d-inline-block"> - Closes at 12PM</div>
+          </div>
+        </div>
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-red">Italian · 200m</div>
+          </div>
+          <div class="ml-auto">
+            <div class="rate text-right">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.50002 0.916626L6.91627 3.78579L10.0834 4.24871L7.79169 6.48079L8.33252 9.63413L5.50002 8.14454L2.66752 9.63413L3.20835 6.48079L0.916687 4.24871L4.08377 3.78579L5.50002 0.916626Z" fill="#FF414D" stroke="#FF414D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="row m-0 pt-1">
+          <div class="mr-auto">
+            <div class="color-gray font-sm">
+              last booked on Nov 17, 2019.
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="color-green text-right">
+              Avg. $70 for two people
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header p-0">
+        <img src="assets/img/pizza.jpeg" class="w-100" alt="pizza" />
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172V3.84172Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-black font-bold">Nobu</div>
+          </div>
+          <div class="d-inline-block text-right ml-auto">
+            <div class="color-green d-inline-block">Open Now</div>
+            <div class="color-gray font-sm d-inline-block"> - Closes at 12PM</div>
+          </div>
+        </div>
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-red">Italian · 200m</div>
+          </div>
+          <div class="ml-auto">
+            <div class="rate text-right">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.50002 0.916626L6.91627 3.78579L10.0834 4.24871L7.79169 6.48079L8.33252 9.63413L5.50002 8.14454L2.66752 9.63413L3.20835 6.48079L0.916687 4.24871L4.08377 3.78579L5.50002 0.916626Z" fill="#FF414D" stroke="#FF414D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="row m-0 pt-1">
+          <div class="mr-auto">
+            <div class="color-gray font-sm">
+              last booked on Nov 17, 2019.
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="color-green text-right">
+              Avg. $70 for two people
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header p-0">
+        <img src="assets/img/pizza.jpeg" class="w-100" alt="pizza" />
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172V3.84172Z" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-black font-bold">Nobu</div>
+          </div>
+          <div class="d-inline-block text-right ml-auto">
+            <div class="color-green d-inline-block">Open Now</div>
+            <div class="color-gray font-sm d-inline-block"> - Closes at 12PM</div>
+          </div>
+        </div>
+        <div class="row m-0 pb-1">
+          <div class="mr-auto">
+            <div class="color-red">Italian · 200m</div>
+          </div>
+          <div class="ml-auto">
+            <div class="rate text-right">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.50002 0.916626L6.91627 3.78579L10.0834 4.24871L7.79169 6.48079L8.33252 9.63413L5.50002 8.14454L2.66752 9.63413L3.20835 6.48079L0.916687 4.24871L4.08377 3.78579L5.50002 0.916626Z" fill="#FF414D" stroke="#FF414D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="row m-0 pt-1">
+          <div class="mr-auto">
+            <div class="color-gray font-sm">
+              last booked on Nov 17, 2019.
+            </div>
+          </div>
+          <div class="ml-auto">
+            <div class="color-green text-right">
+              Avg. $70 for two people
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <ul class="footer-nav">
+      <li class="nav-item">
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#19A5B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 22V12H15V22" stroke="#19A5B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 2V6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 2V6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 10H21" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item main-nav">
+        <a href="#">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <circle cx="50" cy="50" r="30" fill="#19A5B6"/>
+            </g>
+            <path d="M44.3333 36.25H40.0833C39.3319 36.25 38.6112 36.5485 38.0799 37.0799C37.5485 37.6112 37.25 38.3319 37.25 39.0833V43.3333M62.75 43.3333V39.0833C62.75 38.3319 62.4515 37.6112 61.9201 37.0799C61.3888 36.5485 60.6681 36.25 59.9167 36.25H55.6667M55.6667 61.75H59.9167C60.6681 61.75 61.3888 61.4515 61.9201 60.9201C62.4515 60.3888 62.75 59.6681 62.75 58.9167V54.6667M37.25 54.6667V58.9167C37.25 59.6681 37.5485 60.3888 38.0799 60.9201C38.6112 61.4515 39.3319 61.75 40.0833 61.75H44.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M49.0137 41.8767V47.137C49.0137 47.6212 48.6212 48.0137 48.137 48.0137H42.8767C42.3925 48.0137 42 47.6212 42 47.137V41.8767C42 41.3925 42.3925 41 42.8767 41H48.137C48.6212 41 49.0137 41.3925 49.0137 41.8767ZM47.2603 42.7534H43.7534V46.2603H47.2603V42.7534ZM57.1233 48.0137H51.863C51.3788 48.0137 50.9863 47.6212 50.9863 47.137V41.8767C50.9863 41.3925 51.3788 41 51.863 41H57.1233C57.6075 41 58 41.3925 58 41.8767V47.137C58 47.6212 57.6075 48.0137 57.1233 48.0137ZM56.2466 42.7534H52.7397V46.2603H56.2466V42.7534ZM49.0137 50.863V56.1233C49.0137 56.6075 48.6212 57 48.137 57H42.8767C42.3925 57 42 56.6075 42 56.1233V50.863C42 50.3788 42.3925 49.9863 42.8767 49.9863H48.137C48.6212 49.9863 49.0137 50.3788 49.0137 50.863ZM47.2603 51.7397H43.7534V55.2466H47.2603V51.7397ZM55.9945 55.8712H52.9918C52.5075 55.8712 52.1151 55.4788 52.1151 54.9945V51.9918C52.1151 51.5075 52.5075 51.1151 52.9918 51.1151H55.9945C56.4788 51.1151 56.8712 51.5075 56.8712 51.9918V54.9945C56.8712 55.4788 56.4788 55.8712 55.9945 55.8712ZM55.1178 52.8685H53.8685V54.1178H55.1178V52.8685Z" fill="white"/>
+            <defs>
+            <filter id="filter0_d" x="0" y="0" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="10"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.0980392 0 0 0 0 0.647059 0 0 0 0 0.713726 0 0 0 1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
